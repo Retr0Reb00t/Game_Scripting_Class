@@ -1,0 +1,131 @@
+Isaiah Franklin
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+1. PRINT USER INPUT AS ALL CAPS
+
+variable: userInput = none.
+
+
+Create a while loop that checks if the userInput is not empty, is none and that it can be capitalized:
+
+	Give the user a message asking them what they want to capitalize, allow them to input a string.
+	
+	Store there input in userInput.
+
+
+Use string function to capitalize the input and store it in userInput.
+
+
+Print out userInput to show that it is now capitalized.
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+2. ADD TWO USER INPUTTED NUMBERS TOGETHER AND PRINT THE RESULT
+
+variable: userNumberOne = none
+variable: userNumberTwo = none
+
+
+function: getANumber:
+
+	variable: num = none
+
+	Create a while loop that loops when num is empty, is none or doesn't equal a number:
+
+		Give the user a message asking them to type a number.
+	
+	Returns the User's input once valid.
+
+
+Use getANumber to store a number in useNumberOne.
+
+Use getANumber to store a number in userNumberTwo.
+
+
+Print out the results of adding userNumberOne with userNumberTwo.
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+3. GET A RANDOM AMOUNT OF NUMBERS FROM USER AND ADD THEM ALL UP
+
+variable: addUp = 0
+variable: num = none
+variable: addMore = yes
+
+
+Create a while loop that will only stop when addMore is equal to no:
+
+	Create another while loop that loops when num is empty, is none or doesn't equal a number:
+
+		Give the user a message asking them to type a number.
+
+		Store user input in num.
+
+	add num to addUp.
+
+	make num equal none.
+	
+
+	ask user if they want to add another number:
+		if they enter yes, continue while loop.
+		if they enter anything else, change addMore to equal no.
+
+Print out allUp.
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+4. DEFINE A MAX NUMBER TO PRINT OUT A RANDOM NUMBER BETWEEN 0 AND THE MAX NUMBER ASK USER IF THEY WANT TO PLAY AGAIN
+
+variable: maxNum = none
+variable: playAgain = yes
+
+Create a while loop that will only stop when playAgain is equal to no:
+
+	Create another while loop that loops when maxNum is empty, is none or doesn't equal a whole number:
+
+		Ask the user to input a max whole number.
+
+		store input in maxNum.
+
+	Print out a random number between 0 and maxNum.
+
+	
+	Ask the user if they want to play again:
+		if they enter yes, continue while loop.
+		if they enter anything else, change playAgain to equal no.
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+5. GET A RANDOM NUMBER AND PRINT IT ON ONE SIDE OR THE OTHER DEPENDING ON IF IT IS EVEN OR ODD
+
+variable: num = none
+variable: leftNum = 0;
+variable rightNum = 0;
+
+Create a for loop that will loop ten times:
+
+	Create a while loop that loops when num is empty, is none or doesn't equal a whole number:
+
+		Ask the user to input a whole number.
+
+		Store input in num.
+	
+	If num is an even number:
+		Print out "Right".
+
+		add 1 to rightNum.
+
+	If num is an odd number:
+		Print out "Left".
+
+		add 1 to leftNum.
+
+Print how many times right was printed using rightNum.
+
+Print how many times left was printed using leftNum.
