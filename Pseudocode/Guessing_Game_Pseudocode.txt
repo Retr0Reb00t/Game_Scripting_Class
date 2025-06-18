@@ -1,0 +1,45 @@
+Isaiah Franklin
+-------------------------------------------------------
+GUESSING GAME PSEUDOCODE
+-------------------------------------------------------
+
+variable: playAgain = yes
+variable: randNum = none
+variable: userGuess = none
+variable: guessesLeft = 7
+variable: win = no
+
+Create a while loop that will only stop when playAgain is equal to no:
+
+	randNum = randomly generated number from 1 to 100.
+
+	Create another while loop that will end when guessLeft is equal to 0 or when win is equal to yes:
+		
+		Ask user to input a number.
+		Store input in userGuess.
+
+		if(userGuess == randNum):
+
+			win = yes.
+		else:
+
+			guessesLeft--.
+			
+			if(useGuess < randNum):
+		
+				Print out "Too Small".
+			else:
+
+				Print out "Too Big".
+
+	If(win = yes):
+
+		Print out "You Win".
+
+	else:
+
+		Print put "You Lose".
+
+	ask the user if they want to play again:
+		if they enter yes, continue while loop.
+		if they enter anything else, change playAgain to equal no.
