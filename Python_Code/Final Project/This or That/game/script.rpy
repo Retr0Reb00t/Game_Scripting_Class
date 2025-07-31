@@ -16,7 +16,7 @@ image Mindy_Blackburn = "images/Mindy Blackburn.png"
 # The game starts here.
 
 label start:
-    # Declares all neede variables
+    # Declares all needed variables
     $ Ash_name = "Me"
     $ Barry_name = "???"
     $ Mindy_name = "???"
@@ -35,9 +35,11 @@ label start:
     Ash "{i}(I search my surrondings, however they're completely foreign to me.)"
     Ash "{i}(However, I realized that I wasn't alone.)"
 
+    # shows Barry & Mindy
     show Barry_Whitter at left with fade
     show Mindy_Blackburn at right with fade
 
+    # More Dialogue
     Ash "{i}(Two people stood at the opposite corner of the room; a guy and a girl.)"
     Mindy "Finnally you woke up. Enjoyed your beauty rest?"
     Barry "Sorry for not waking you, {i}SOMEBODY{/i} though it would be better to not wake you."
@@ -45,11 +47,12 @@ label start:
     Ash "{i}(The two started to bicker, I guess I should figure out this two's names.)"
 
 
+    # Choice to who you speak to first
     menu:
         "Who do you talk to first?"
 
-        "Ask the guy's name":
-            $ Barry_name = "Barry Whitter"
+        "Ask the guy's name": # You talk to Barry first
+            $ Barry_name = "Barry Whitter" # Changes Barry's display name
 
             Barry "I'm Barry Whitter. I'm a Sanitation Worker."
             Mindy "Who's surprised, the filth messes around with filth."
@@ -58,7 +61,7 @@ label start:
             Barry "And what the hell do you do exactly?"
             Mindy "I'm though you'd never ask."
 
-            $ Mindy_name = "Mindy Blackburn"
+            $ Mindy_name = "Mindy Blackburn" # Changes Mindy's display name
 
             Mindy "Mindy Blackburn, Money Lendor."
             Barry "Oh, so a loan shark is saying I'm worthless? That's rich."
@@ -66,8 +69,8 @@ label start:
             Barry "YOU'RE THE ONE WHO CALLED ME- you know what, nevermind."
             Barry "So, what's your name?"
 
-        "Ask the girl's name":
-            $ Mindy_name = "Mindy Blackburn"
+        "Ask the girl's name": # You talk to Mindy first
+            $ Mindy_name = "Mindy Blackburn" # Changes Mindy's display name
 
             Mindy "Mindy Blackburn, Money Lendor."
             Barry "Oh, so you're a loan shark; should've known from your shitty attitude."
@@ -75,7 +78,7 @@ label start:
             Barry "Sure, if that service was robbing people blind."
             Mindy "And who are you to think you can judge my business ventures?"
 
-            $ Barry_name = "Barry Whitter"
+            $ Barry_name = "Barry Whitter" # changes Barry's display name
 
             Barry "...I'm Barry Whitter. I'm a Sanitation Worker."
             Mindy "Who's surprised, the filth messes around with filth."
@@ -83,8 +86,9 @@ label start:
             Mindy "Whatever. You, what's your name?"
 
     
-    $ Ash_name = "Ash Grawert"
+    $ Ash_name = "Ash Grawert" # Changes Ash's display name
 
+    # More dialogue
     Ash "My name's Ash Grawert. I am a Funeral Attendant."
     Mindy "Well Grawert, welcome to your new, disgusting home."
     Mindy "Oh Whitter, maybe you can put yourself to use and clean up."
@@ -92,51 +96,55 @@ label start:
     Ash "{i}(She's not wrong. The room is almost entirley destitute, everything is either cracked, or rusted.)"
     Ash "{i}(Everything, except a machine dead center in the room.)"
 
+    # changes background
     scene background
 
+    # More dialogue
     Ash "{i}(The machine has a single monitor, two files laying on top of it, an intercom system with mic and speaker, & two buttons.)"
     Ash "{i}(One is labled: Participant 2; the other: Participant 3.)"
     Ash "{i}(As I try to understand what I are looking at. A voice comes over the intercom's speaker.)"
-
-
     Announcer "{b}ROUND 2 SHALL NOW BEGIN. PARTICIPANTs 4, 5, & 6, IN FRONT OF YOU IS A MONITER THAT LINKS TO ANOTHER ROOM."
     Announcer "{b}IN SAID ROOM CONTAINS TWO OTHER PARTICIPANTS. ALL YOU HAVE TO DO IS MAKE SURE SOMETHING DIES IN THAT ROOM WITHIN 15 MINUTES."
     Announcer "{b}FALLIURE TO DO SO WILL CAUSE AN UNWANTED OUTCOME. YOU MAY USE THE PROVIDED PUBLIC & PRIVATE RECORDS ON THE PARTICIPANTS & SPEAK TO THE PARTICIAPNTS TO MAKE YOUR DECISION."
     Announcer "{b}ONCE YOU'VE MADE YOUR DECISION, PRESS THE CORRESPODING BUTTON IN FRONT OF YOU. YOUR FIFTEEN MINUTES BEGINS NOW."
-
     Ash "{i}(As the voice cuts off, the monitor turns on to reveal another room with two other individuals.)"
-
     Jade "Hey! Can you hear us?! GET US OUT OF HERE!!"
     Finn "Quiet down! If we couldn't find a way out, what makes you think that someone else in another room could."
     Jade "Because if we don't get out of here in 15 minutes, then we'll die!"
 
+    # Shows Mindy
     show Mindy_Blackburn at right
 
+    # More dialogue
     Mindy "Well technically, only one of you will die."
     Jade "THAT'S BARELY ANY BETTER!!!"
 
+    # Shows Barry
     show Barry_Whitter at left
 
+    # More dialogue
     Barry "Jesus Christ Mindy! Don't worry, well try to get you out of there."
     Ash "{i}(We only have a few minutes, but I should get to know who these two are.)"
 
 
+    # Choice to who you speak to first
     menu:
         "Who should you talk to first?"
 
-        "Talk to Participant 2":
-            $ Jade_name = "Jade Grunberg"
+        "Talk to Participant 2": # Talk to Jade first
+            $ Jade_name = "Jade Grunberg" # changes Jade's diplay name
 
             Jade "Um.. I am Jade Grunberg... I work a-"
             Finn "We don't have time for idle chatter."
             Jade "Ahh!"
 
-            $ Finn_name = "Finn Morricone"
+            $ Finn_name = "Finn Morricone" # changes Finn's display name
 
             Finn "The names's Finn Morricone."
             Jade "Please, help us get out of here!!"
 
-        "Talk to Participant 3":
+        "Talk to Participant 3": # Talk to Finn First
+            # Changes Finn's and Jade's display name
             $ Finn_name = "Finn Morricone"
             $ Jade_name = "Jade Grunberg"
 
@@ -147,6 +155,7 @@ label start:
             Finn "Otherwise, pick one of us to die already."
         
 
+    # More dialogue
     Mindy "I suggest we should act quickly and use are resources effectivley."
     Barry "Ditto! We have to act fast if we want to save them."
     Mindy "Sure... save them...."
@@ -155,28 +164,150 @@ label start:
     Ash "{i}(As the two start arguing... again, I start thinking about what we need to do next.)"
 
 
+    # Loops three times
     while attempts > 0:
-
+        # Makes you choice what to do next
         menu:
             "What do yo do"
 
-            "Make your decision":
+            "Make your decision": # Decide who dies
                 Ash "{i}(I look at the buttons in front of me. We had to make this decision eventually.)"
                 Jade "Don... Don't kill me!"
                 Finn "Hey! I ain't dying; pick them, not me!"
                 Ash"{i}(You try to drown out their screaming and pick who dies.)"
 
-
+                
+                # Loops until the player runs out of attempts
                 while attempts > 0:
+                    # Choose who dies
                     menu:
                         "Who do you choose to kill?"
 
-                        "Kill Jade Grunberg":
-                            ""
-                        "Kill Finn Morricone":
-                            ""
-                        "Think of Somethin else":
-                            ""
+                        "Kill Jade Grunberg": # You choose Jade to die
+                            Ash "{i}(I press Participant 2's button.)"
+                            Announcer "{b}PARTICIPANT 2 HAS BEEN CHOSEN FOR DEATH. PREPARE FOR EXECUTION."
+                            Jade "WHAT?! No! No no no no no no! Please don- " 
+                            "{b}*KA-BOOM*" with vpunch
+                            Barry "W...what was that sound!?"
+                            Ash "{i}(We check the monitor to see what made that sound, and find it.)"
+                            Ash "{i}(Jade's head had exploded.)"
+                            Announcer "{b}ROUND 2 RESULTS: PARTICIPANT 2 HAS DIED."
+                            Announcer "{b}PARTICIPANT 3: FINN MORRICONE HAS SURVIVED. PLEASE EXIT YOUR TRIAL ROOM."
+                            Finn "Thanks for not killing me."
+                            Finn "Maybe we can meet up when you get out of here."
+                            Barry "I.... I can't believe we just did that."
+                            Ash "{i}(I sit on the floor and thought about what just happened."
+                            Ash "{i}(I just killed someone, but at least I saved people and myself.)"
+                            Ash "{i}(But then, you here the intercom's speaker crackle again.)"
+                            Announcer "{b}ROUND 3 SHALL NOW BEGIN. PARTICIPANTS 7, 8, 9, & 10, IN FRONT OF YOU IS A MONITER THAT LINKS TO ANOTHER ROOM."
+                            Announcer "{b}IN SAID ROOM CONTAINS THREE OTHER PARTICIPANTS. ALL YOU HAVE TO DO IS MAKE SURE SOMETHING DIES IN THAT ROOM WITHIN 15 MINUTES."
+                            Announcer "{b}FALLIURE TO DO SO WILL CAUSE AN UNWANTED OUTCOME. YOU MAY USE THE PROVIDED PUBLIC & PRIVATE RECORDS ON THE PARTICIPANTS & SPEAK TO THEM TO MAKE YOUR DECISION."
+                            Announcer "{b}ONCE YOU'VE MADE YOUR DECISION, PRESS THE CORRESPODING BUTTON IN FRONT OF YOU. YOUR FIFTEEN MINUTES BEGINS NOW."
+
+                            scene black
+
+                            # Ending
+                            "{b}{i}Ending A: Survival of the Fittest."
+                            return
+
+                        "Kill Finn Morricone": # You choose Finn to die
+                            Ash "{i}(I press Participant 3's button.)"
+                            Announcer "{b}PARTICIPANT 3 HAS BEEN CHOSEN FOR DEATH. PREPARE FOR EXECUTION."
+                            Finn "You Fuck! You think I'm going to let you kill me?! Think ag-" 
+                            "{b}*KA-BOOM*" with vpunch
+                            Barry "W...what was that sound!?"
+                            Ash "{i}(We check the monitor to see what made that sound, and find it.)"
+                            Ash "{i}(Finn's head had exploded.)"
+                            Announcer "{b}ROUND 2 RESULTS: PARTICIPANT 3 HAS DIED."
+                            Announcer "{b}PARTICIPANT 2: Jade Grunberg HAS SURVIVED. PLEASE EXIT YOUR TRIAL ROOM."
+                            Jade "Th... Thank you for saving me. I hope you get out of here"
+                            Mindy "Hmm...I guess that choice is acceptable."
+                            Ash "{i}(I sit on the floor and thought about what just happened."
+                            Ash "{i}(I just killed someone, but at least I saved people and myself.)"
+                            Ash "{i}(But then, you here the intercom's speaker crackle again.)"
+                            Announcer "{b}ROUND 3 SHALL NOW BEGIN. PARTICIPANTS 7, 8, 9, & 10, IN FRONT OF YOU IS A MONITER THAT LINKS TO ANOTHER ROOM."
+                            Announcer "{b}IN SAID ROOM CONTAINS THREE OTHER PARTICIPANTS. ALL YOU HAVE TO DO IS MAKE SURE SOMETHING DIES IN THAT ROOM WITHIN 15 MINUTES."
+                            Announcer "{b}FALLIURE TO DO SO WILL CAUSE AN UNWANTED OUTCOME. YOU MAY USE THE PROVIDED PUBLIC & PRIVATE RECORDS ON THE PARTICIPANTS & SPEAK TO THEM TO MAKE YOUR DECISION."
+                            Announcer "{b}ONCE YOU'VE MADE YOUR DECISION, PRESS THE CORRESPODING BUTTON IN FRONT OF YOU. YOUR FIFTEEN MINUTES BEGINS NOW."
+
+                            scene black
+
+                            # Ending
+                            "{b}{i}Ending B: Judgement Day."
+                            return
+
+                        "Think of Somethin else": # You want to do something else
+                            Ash "I think we should try something else instead of pushing the button."
+                            Jade " Easy for you to say! Your life isn't on the line!"
+                            Finn "What else is their for us to do? Just push a button already!"
+                            Mindy "Wow Grawert, I think that might be the worst idea I ever heard."
+                            Barry "Yeah, we're sorta on a time limit."
+                            if found_box: # Allows you to open the box
+                                Ash "Let's try to open the box."
+                                Finn "There is a six digit lock on it. It seems to use only letters."
+                                Jade "Participant 2: There is also text above the lock. Let me read it out:"
+
+                                # loops till player runs out of attempts
+                                while (attempts > 0):
+                                    "WE ARE SIX OF A KIND AND FILL THE WORLD WITH VIVID LIFE."
+                                    "YOU NEED ONLY ARE INITIALS AND NOTHING MORE."
+                                    "ORDER THE PRIMARIYS OF THE LIGHT BEFORE THE PRIMARYS OF THE INK."
+                                    "FINALLY LINE EACH GROUP FROM LIGHTEST TO DARKEST."
+            
+                                    # stores and transforms user's input
+                                    $ code = renpy.input("What is the passcode?", length = 6)
+                                    $ code = code.upper()
+            
+                                    # if player is correct
+                                    if code == "GRBYCM":
+                                        Jade "It worked! Now what?"
+                                        Mindy "Yeah... What are we supposed to do with a mannequin?"
+                                        Ash "..."
+                                        Ash "You need to stab the Mannequin."
+                                        Barry "...What?"
+                                        Ash "All we were asked to do is make sure something in that room dies."
+                                        Ash "We were never told that the thing that needs to dies has to be human."
+                                        Finn "It's better than nothing."
+                                        Ash "{i}(Finn grabs a shard of floor tile and stabs the mannequin.)"
+                                        Announcer "ROUND 2 RESULTS: THE MANNEQUIN IS DEAD."
+                                        Announcer "PARTICIPANT 2: JADE GRUNBERG & PARTICIPANT 3: FINN MORRICONE HAVE SURVIVED. PLEASE EXIT YOUR TRIAL ROOM."
+                                        Announcer "WELL DONE PARTICIPANTS."
+                                        Jade "Thank you so much for saving us!"
+                                        Finn "Ditto. We would be dead without you. We will do are best to try to get you out of here."
+                                        Mindy "I'm... actually suprised that it was that easy."
+                                        Barry "Yeah, but I'm glad that we could save them!"
+                                        Ash "{i}(I took a sigh of relief. We saved them both; nobody had to die.)"
+                                        Ash "{i}(But then you here the intercom's speaker crackle again.)"
+                                        Announcer "{b}ROUND 3 SHALL NOW BEGIN. PARTICIPANTS 7, 8, 9, & 10, IN FRONT OF YOU IS A MONITER THAT LINKS TO ANOTHER ROOM."
+                                        Announcer "{b}IN SAID ROOM CONTAINS THREE OTHER PARTICIPANTS. ALL YOU HAVE TO DO IS MAKE SURE SOMETHING DIES IN THAT ROOM WITHIN 15 MINUTES."
+                                        Announcer "{b}FALLIURE TO DO SO WILL CAUSE AN UNWANTED OUTCOME. YOU MAY USE THE PROVIDED PUBLIC & PRIVATE RECORDS ON THE PARTICIPANTS & SPEAK TO THEM TO MAKE YOUR DECISION."
+                                        Announcer "{b}ONCE YOU'VE MADE YOUR DECISION, PRESS THE CORRESPODING BUTTON IN FRONT OF YOU. YOUR FIFTEEN MINUTES BEGINS NOW."
+
+                                        scene black
+
+                                        Ash "{i}(It took us a while to realize what was said, but we said calm. All we have to do is find and kill the mannequin.)"
+                                        Ash"{i}(And so, we started searching for the mannequin in our room.)"
+                                        "{b}{i}Ending E: Another Way Out." # Ending
+                                        return
+                                    else: # if player is wrong
+                                        Finn "Shit! It didn't work"
+                    
+                                    # removes an attempt and warns the player
+                                    $ attempts = attempts - 1
+
+                                    if attempts == 1:
+                                        Announcer "{b}WARNING, YOU HAVE 1 MINUTE LEFT. I SUGGEST YOU DECIDE WHO DIES QUICKLY."
+                                        Mindy "Stop goofing around!"
+                            
+                            elif attempts - 1 > 0: # Gives advice on who to kill if you looked at either record
+                                Ash "{i}(They're right, we don't have anything else to work with. Maybe I should just think about this more.)"
+                                if read_publicFile:
+                                    Mindy "Clearly we should kill Grunberg."
+                                    Mindy "We should be saving the most valuable people. The only valuable thing that relates Grunberg is the price of their jewlery."
+                                if read_privateFile:
+                                    Barry "We need to kill Finn."
+                                    Barry "In a situation like this, we need the best people alive, and that is the opposite of Finn!"
+                                    Barry "They are a heartless monster that shouldn't leave this place."
 
 
                     # removes an attempt and warns the player
@@ -189,27 +320,30 @@ label start:
                         Mindy "Stop goofing around. We need to make a decision now!"
                         Ash "I guess there is nothing else we can do."
 
+                # If the player wastes all their time
+                if not found_box:
+                    Finn "Fuck this shit. I ain't dying here!"
+                    Ash "{i}(Finn rips a rusty pipe from the wall and starts swinging at Participant 2.)"
+                    Ash "{i}(In defense, Participant 2 grabs a broken tile and swings back.)"
+                    Ash "{i}(After stabbing and blundgeoning each other a few times, they both collapsed, lying in a pool of their own blood.)"
+                    Announcer "{b}ROUND 2 RESULTS: BOTH PARTICIPANT 2 & 3 ARE DEAD."
+                    Announcer "{b}PARTICIPANT 4, 5, & 6, WE ARE RATHER DISAPPOINTED IN YOUR INABILITY TO PICK SOMEONE TO DIE."
+                    Barry "Ho-holy Hell! What The Fuck!?!"
+                    Mindy "Ugh. What a waste of life..."
+                    Ash "{i}(I slump to the ground. I just killed to people. I just stood here and watched them kill each other.)"
+                    Ash"{i}(As I drown in your sorrow & cowardice, I here the intercom's speaker crackle again.)"
+                    Announcer "{b}ROUND 3 SHALL NOW BEGIN. PARTICIPANTS 7, 8, 9, & 10, IN FRONT OF YOU IS A MONITER THAT LINKS TO ANOTHER ROOM."
+                    Announcer "{b}IN SAID ROOM CONTAINS THREE OTHER PARTICIPANTS. ALL YOU HAVE TO DO IS MAKE SURE SOMETHING DIES IN THAT ROOM WITHIN 15 MINUTES."
+                    Announcer "{b}FALLIURE TO DO SO WILL CAUSE AN UNWANTED OUTCOME. YOU MAY USE THE PROVIDED PUBLIC & PRIVATE RECORDS ON THE PARTICIPANTS & SPEAK TO THEM TO MAKE YOUR DECISION."
+                    Announcer "{b}ONCE YOU'VE MADE YOUR DECISION, PRESS THE CORRESPODING BUTTON IN FRONT OF YOU. YOUR FIFTEEN MINUTES BEGINS NOW."
 
-                Finn "Fuck this shit. I ain't dying here!"
-                Ash "{i}(Finn rips a rusty pipe from the wall and starts swinging at Participant 2.)"
-                Ash "{i}(In defense, Participant 2 grabs a broken tile and swings back.)"
-                Ash "{i}(After stabbing and blundgeoning each other a few times, they both collapsed, lying in a pool of their own blood.)"
-                Announcer "{b}ROUND 2 RESULTS: BOTH PARTICIPANT 2 & 3 ARE DEAD."
-                Announcer "{b}PARTICIPANT 4, 5, &, WE ARE RATHER DISAPPOINTED IN YOUR INABILITY TO PICK SOMEONE TO DIE."
-                Barry "Ho-holy Hell! What The Fuck!?!"
-                Mindy "Ugh. What a waste of life..."
-                Ash "{i}(I slump to the ground. I just killed to people. I just stood here and watched them kill each other.)"
-                Ash"{i}(As I drown in your sorrow & cowardice, I here the intercom's speaker crackle again.)"
-                Announcer "{b}ROUND 3 SHALL NOW BEGIN. PARTICIPANTS 7, 8, 9, & 10, IN FRONT OF YOU IS A MONITER THAT LINKS TO ANOTHER ROOM."
-                Announcer "{b}IN SAID ROOM CONTAINS THREE OTHER PARTICIPANTS. ALL YOU HAVE TO DO IS MAKE SURE SOMETHING DIES IN THAT ROOM WITHIN 15 MINUTES."
-                Announcer "{b}FALLIURE TO DO SO WILL CAUSE AN UNWANTED OUTCOME. YOU MAY USE THE PROVIDED PUBLIC & PRIVATE RECORDS ON THE PARTICIPANTS & SPEAK TO THEM TO MAKE YOUR DECISION."
-                Announcer "{b}ONCE YOU'VE MADE YOUR DECISION, PRESS THE CORRESPODING BUTTON IN FRONT OF YOU. YOUR FIFTEEN MINUTES BEGINS NOW."
+                    scene black
 
-                scene black
+                    # Ending
+                    "{b}{i}Ending C: A Cowards Way Out."
+                    return
 
-                "{b}{i}Ending C: A Cowards Way Out."
-
-            "Read the Public Records" if (not read_publicFile and attempts > 1):
+            "Read the Public Records" if (not read_publicFile and attempts > 1): # Reads the public file
                 Ash "We should read the Public Records."
                 Ash "{i}(I grabbed the Public Records and open it.)"
                 Barry "It says that here that Jade is a Lapidarist."
@@ -239,7 +373,7 @@ label start:
 
                 $ read_publicFile = True # Notes that the player read the public records
 
-            "Read the Private Records" if (not read_privateFile and attempts > 1):
+            "Read the Private Records" if (not read_privateFile and attempts > 1): # Reads the public file
                 Ash "We should read the Private Records."
                 Ash "{i}(I grabbed the Private Records and open it.)"
                 Ash "{i}(...Most of these doesn't seem that imporant.)"
@@ -273,9 +407,9 @@ label start:
 
                 $ read_privateFile = True # Notes that the player read the private records
 
-            "Ask them to look around their surrondings" if (attempts > 1):
+            "Ask them to look around their surrondings" if (attempts > 1): # Have Jade & Finn search their surrondings
                 Ash "Can you tell us what your room is liked."
-                if not found_box:
+                if not found_box: # If you haven't found the box yet
                     Barry "How would that help them?"
                     Ash "We should try to get as much information as we can. You want to save them, right?"
                     Barry "Yes..."
@@ -288,20 +422,22 @@ label start:
                     Jade "Huh? Hey, the floor here is loose!"
 
 
+                    # Choose if you want to remove the tiles
                     menu:
                         "What should you do?"
 
-                        "Remove the tiles":
+                        "Remove the tiles": # Tell them to remove the tiles
                             Ash "You should remove the tiles."
                             Ash "{i}(They started digging through the tiles.)"
                             Jade "Hey, there's something down here.... is that a mannequin."
                             Finn " Yeah, but it's locked in a box. there is nothing more that we can do."
                             $ found_box = True # notes that the player found the box
 
+                            # Choose if you want to try and open the box
                             menu:
                                 "What should you do?"
 
-                                "Try to open the box":
+                                "Try to open the box": # You want to open the box
                                     Ash "Let's try to open the box."
                                     Finn "There is a six digit lock on it. It seems to use only letters."
                                     Jade "Participant 2: There is also text above the lock. Let me read it out:"
@@ -346,7 +482,7 @@ label start:
 
                                             Ash "{i}(It took us a while to realize what was said, but we said calm. All we have to do is find and kill the mannequin.)"
                                             Ash"{i}(And so, we started searching for the mannequin in our room.)"
-                                            "{b}{i}Ending E: Another Way Out."
+                                            "{b}{i}Ending E: Another Way Out." # Ending
                                             return
                                         else: # if player is wrong
                                             Finn "Shit! It didn't work"
@@ -360,12 +496,12 @@ label start:
                                             Announcer "{b}WARNING, YOU HAVE 1 MINUTE LEFT. I SUGGEST YOU DECIDE WHO DIES QUICKLY."
                                             Mindy "Stop goofing around!"
 
-                                "Think of something else":
+                                "Think of something else": # You want to do something else
                                     Ash "I try to think of something else to do."
 
-                        "Search the room more":
+                        "Search the room more": # You want to search the room more
                             Ash "{i}(They searched the room again, but they came up empty-handed.)"
-                else:
+                else: # If you have found the box
                     Ash "{i}(They searched the room again, but they came up empty-handed.)"
 
             "Try to open the box" if (found_box and attempts > 1):
@@ -461,5 +597,5 @@ label start:
     Ash "{i}(It took us a while to realize what was said...the mannequin...that is the way out of here.)"
     Ash "{i}(And so, we started to search for the mannequin in our room.)"
     Ash "{i}(...Please tell me we have a mannequin.)"
-    "{b}{i}Ending D: Savior Complex."
+    "{b}{i}Ending D: Savior Complex." # Ending
     return
